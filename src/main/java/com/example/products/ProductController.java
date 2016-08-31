@@ -17,7 +17,7 @@ public class ProductController {
     //TODO change return type to ResponseEntity<T> to provide custom response codes
     //TODO define customized @ResponseStatus exceptions
     //TODO endpoint authentication
-    //TODO peform server side validation as client side validation can be bypassed.
+    //testing development branch
 
     @Autowired
     private ProductDao productDao;
