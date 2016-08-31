@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="ShopifyDemo" uuid="f77ea6c8-4236-4758-aab4-81a60320a698">
+      <secret-storage>master_key</secret-storage>
+      <user-name>Aaron</user-name>
+      <introspection-scope>:</introspection-scope>
+      <resolve-scope>:</resolve-scope>
+    </data-source>
+  </component>
+</project>
