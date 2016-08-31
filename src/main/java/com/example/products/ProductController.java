@@ -17,7 +17,6 @@ public class ProductController {
 
     //TODO if performance is an issue turn on cache header
     //TODO change return type to ResponseEntity<T> to provide custom response codes
-    //TODO define customized @ResponseStatus exceptions
     //TODO endpoint authentication
 
     @Autowired
