@@ -27,7 +27,7 @@ public class ProductDao {
 
     public Product insertProduct(Product product){
         log.info("Inserting product " + product.getName());
-        String sql = "INSERT INTO PRODUCTS (Name, Description, Price) VALUES (?,?,?)";
+        String sql = "INSERT INTO Products (Name, Description, Price) VALUES (?,?,?)";
         KeyHolder idHolder = new GeneratedKeyHolder();
         int numberOfRows = jdbcTemplate.update((Connection connection) -> {
                 PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -45,7 +45,7 @@ public class ProductDao {
 
     public List<Product> getProducts(){
         log.info("Getting all products");
-        String sql = "SELECT * FROM  PRODUCTS";
+        String sql = "SELECT * FROM  Products";
         return jdbcTemplate.query(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
@@ -56,7 +56,7 @@ public class ProductDao {
 
     public void updateProductById(Product product){
         log.info("Updating product with id: " + product.getId());
-        String sql = "UPDATE PRODUCTS SET Name = ?, Description = ?, Price = ? WHERE Id = ?";
+        String sql = "UPDATE Products SET Name = ?, Description = ?, Price = ? WHERE Id = ?";
         int numberOfRows = jdbcTemplate.update((Connection connection) -> {
                 PreparedStatement ps = connection.prepareStatement(sql);
                 ps.setString(1, product.getName());
@@ -72,7 +72,7 @@ public class ProductDao {
 
     public void deleteProductById(int productId) throws DataAccessException{
         log.info("Deleting product with id: " + productId);
-        String sql = "DELETE FROM PRODUCTS WHERE Id = ?";
+        String sql = "DELETE FROM Products WHERE Id = ?";
         int numberOfRows = jdbcTemplate.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection connection) throws SQLException {
