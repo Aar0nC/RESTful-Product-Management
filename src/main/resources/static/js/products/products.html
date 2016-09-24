@@ -41,11 +41,23 @@
         </form>
     </div>
 
-    <!--server side error messages-->
-    <div ng-show="serverError" style="color: red">
-        <p>Uh Oh! Something went wrong.</p>
-        <p>{{error}}</p>
-        <button type="submit" class="btn btn-warning pull-left" ng-click="clearServerError()"><i class="glyphicon glyphicon-ok"></i> I won't be malicious again</button>
+    <!--success/fail notifications-->
+    <div>
+
+        <div ng-class="serverSuccess" ng-show="serverSuccess">
+            serverSuccess is true
+            <growl-notifications></growl-notifications>
+                <growl-notification>
+                    {{message}}
+                </growl-notification>
+        </div>
+
+        <div ng-class="serverError" ng-show="serverError">
+            serverError is true
+            <growl-notification>
+                {{message}}
+            </growl-notification>
+        </div>
     </div>
     <br><br>
 
