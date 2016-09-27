@@ -8,7 +8,7 @@
     <artifactId>springboot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>com.symphony.rbc</name>
+    <name>com.aaroncotter</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
